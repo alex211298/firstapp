@@ -1,0 +1,9 @@
+.item {
+    border: thick double #4d1b8d;
+    background-color: turquoise;
+}
+
+.item img {
+    width: 10%;
+    border-radius: 50%;
+}

@@ -1,24 +1,25 @@
-import s from './../styles/Navbar.module.css'
+import s from "./../Navbar/Navbar.module.css";
+
 const Navbar = () => {
   return (
     <nav className={s.nav}>
       <div className={s.item}>
-        Profile
+        <a href="/profile">Profile</a>
       </div>
       <div className={s.item}>
-        Messages
+        <a href="/dialogs">Messages</a>
       </div>
       <div className={s.item}>
-        News
+        <a href="/news">News</a>
       </div>
       <div className={s.item}>
-        Music
+        <a href="/music">Music</a>
       </div>
       <br />
       <div className={s.item}>
-        Settings
+        <a href = "/settings">Settings</a>
       </div>
     </nav>
   );
-}
+};
 export default Navbar;
