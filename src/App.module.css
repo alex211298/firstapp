@@ -2,7 +2,7 @@
     display: grid;
     margin: auto 3%;
     align-items: stretch;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 75px 500px 75px;
     grid-template-columns: 20% 80%;
     grid-gap: 10px;
     grid-template-areas: "header header" "nav c" "footer footer";
