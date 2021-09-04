@@ -1,8 +1,8 @@
 .appWrapper {
     display: grid;
-    margin: auto 3%;
+    margin: auto 2%;
     align-items: stretch;
-    grid-template-rows: 75px 500px 75px;
+    grid-template-rows: 75px 1fr 75px;
     grid-template-columns: 20% 80%;
     grid-gap: 10px;
     grid-template-areas: "header header" "nav c" "footer footer";

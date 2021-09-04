@@ -5,14 +5,14 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./Routes";
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <div className={s.appWrapper}>
         <Header />
         <Navbar />
         <div className={s.appWrapperContent}>
-          <Routes />
+          <Routes appState = {props.appState} />
         </div>
         <Footer />
       </div>

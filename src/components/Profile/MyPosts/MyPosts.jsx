@@ -1,7 +1,9 @@
 import s from "./MyPosts.module.css";
 import Post from "./Posts/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+  let postsElements = props.appState
+    .map(p => <Post name={p.name} message={p.message} like={p.likeCount} />);
   return (
     <div>
       <div className={s.postsBlock}>
@@ -13,9 +15,9 @@ const MyPosts = () => {
           <button>Добавить</button>
         </div>
       </div>
-      <br/>
+      <br />
       <div>
-      <Post name="Alex" message="My first comment" like="15" />
+        {postsElements}
       </div>
     </div>
   );
