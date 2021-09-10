@@ -12,8 +12,7 @@ function App(props) {
         <Header />
         <Navbar />
         <div className={s.appWrapperContent}>
-          <Routes appState = {props.appState}
-                  dispatch = {props.dispatch}/>
+          <Routes store = {props.store}/>
         </div>
         <Footer />
       </div>

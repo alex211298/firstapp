@@ -1,6 +1,7 @@
 import s from "./MyPosts.module.css";
 import Post from "./Posts/Post";
-import React from 'react'
+import React from "react";
+
 
 const MyPosts = (props) => {
   let postsElements = props.appState
@@ -9,13 +10,13 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    props.dispatch({type: 'ADD-POST'});
+    props.onAddPost();
   };
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: text});
-  }
+    props.updatePostText(text);
+  };
 
   return (
     <div>
@@ -25,7 +26,7 @@ const MyPosts = (props) => {
       <div>
         <textarea onChange={onPostChange}
                   ref={newPostElement}
-                  value = {props.newPostText}/>
+                  value={props.newPostText} />
         <div>
           <button
             onClick={addPost}>Добавить
